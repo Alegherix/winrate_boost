@@ -21,7 +21,7 @@ const ImageContainer = styled.header`
   }
 `;
 
-const HeroContainer = styled.section`
+export const HeroContainer = styled.section`
   display: flex;
   flex-direction: column;
   height: 75vh;

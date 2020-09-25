@@ -1,4 +1,4 @@
-import RegisterNavbar from '../components/burger/RegisterNavbar';
+import RegisterNavbar from '../components/nav/RegisterNavbar';
 import Hero from '../components/Hero';
 import Layout from '../utils/layout';
 import Main from '../components/Main';

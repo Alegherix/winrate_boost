@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+  
   body{
     background-color: #222;
     /* background: url("../assets/hero.jpg") no-repeat center center/cover; */

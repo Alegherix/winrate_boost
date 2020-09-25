@@ -6,7 +6,7 @@ interface HeroHeadingProps {
   text: String;
 }
 
-const styledHeader = styled.h1`
+const StyledHeader = styled.h1`
   font-family: ${({ theme }) => theme.fonts.spartan};
   color: ${({ theme }) => theme.colors.primaryWhite};
   font-weight: 800;
@@ -21,10 +21,10 @@ const styledHeader = styled.h1`
   }
 `;
 
-const HeroHeading: React.FC<HeroHeadingProps> = ({}) => {
+const HeroHeading: React.FC<HeroHeadingProps> = ({ text }) => {
   return (
     <>
-      <div></div>
+      <StyledHeader>{text}</StyledHeader>
     </>
   );
 };

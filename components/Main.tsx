@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from '../assets/soldier.jpg';
 import { device } from '../utils/breakpoints';
-
+import HeroHeading from './HeroHeading';
+import { HeroContainer } from '../components/Hero';
 interface MainProps {}
 
 const ImageContainer = styled.header`
@@ -18,7 +19,9 @@ const Main: React.FC<MainProps> = ({}) => {
   return (
     <>
       <ImageContainer />
-      <h2>Hello darkness my old friend</h2>
+      <HeroContainer>
+        <HeroHeading text={'Unlock your potential'} />
+      </HeroContainer>
     </>
   );
 };
