@@ -1,0 +1,14 @@
+1) Fyll Flex container i Main så den expanderar ut fullt.
+2) Gör övergången till None opacity med en transition över typ 0.2s
+
+
+
+
+
+
+
+
+
+Frågor:
+1) Fråga om Log, samt varför boolean check ballar ur inuti samma statement som de andra. 
+2) Best Practice när det kommer till att sätta heights för en sektion.

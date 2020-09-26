@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import MainNavigation from './MainNavigation';
+import Navigation from './Navigation';
 import { device } from '../../utils/breakpoints';
 
 interface BurgerProps {}
@@ -57,7 +57,7 @@ const Burger: React.FC<BurgerProps> = ({}) => {
         <div />
         <div />
       </StyledBurger>
-      <MainNavigation open={open} />
+      <Navigation open={open} />
     </>
   );
 };

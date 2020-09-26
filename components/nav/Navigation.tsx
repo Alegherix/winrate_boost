@@ -55,8 +55,6 @@ const NavbarItems = styled.li`
   }
 
   @media ${device.mobileMin} {
-    /* margin: 2rem; */
-    /* width: 100%; */
   }
 
   @media ${device.tablet} {

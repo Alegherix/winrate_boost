@@ -6,7 +6,7 @@ interface HeroHeadingProps {
   text: String;
 }
 
-const StyledHeader = styled.h1`
+export const StyledHeader = styled.h1`
   font-family: ${({ theme }) => theme.fonts.spartan};
   color: ${({ theme }) => theme.colors.primaryWhite};
   font-weight: 800;

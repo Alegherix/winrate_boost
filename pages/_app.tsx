@@ -12,6 +12,11 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #222;
     /* background: url("../assets/hero.jpg") no-repeat center center/cover; */
+
+    p{
+      color: #A6A6A6;
+      font-family: 'Spartan', sans-serif;
+    }
   }
 
   
