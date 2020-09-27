@@ -8,7 +8,7 @@ interface RegisterButtonProps {
   color?: Color;
 }
 
-const StyledRegisterButton = styled.button`
+export const StyledRegisterButton = styled.button`
   background: ${({ theme }) => theme.colors.primaryBlue};
   color: ${({ theme }) => theme.colors.primaryWhite};
   font-size: 18px;
@@ -42,12 +42,20 @@ export const DarkButton = styled(StyledRegisterButton)`
   background-color: ${({ theme }) => theme.colors.primaryDark};
 `;
 
-const RegisterButton: React.FC<RegisterButtonProps> = ({ text, color }) => {
+const BlackButton = styled(StyledRegisterButton)`
+  background-color: #444;
+`;
+
+const ButtonComponent: React.FC<RegisterButtonProps> = ({ text, color }) => {
   let button;
 
   switch (color) {
     case Color.Dark:
       button = <DarkButton>{text}</DarkButton>;
+      break;
+
+    case Color.Black:
+      button = <BlackButton>{text}</BlackButton>;
       break;
 
     default:
@@ -57,4 +65,4 @@ const RegisterButton: React.FC<RegisterButtonProps> = ({ text, color }) => {
   return <>{button}</>;
 };
 
-export default RegisterButton;
+export default ButtonComponent;

@@ -32,6 +32,22 @@ const StyledSection = styled.main`
       font-size: 16px;
     }
   }
+
+  @media ${device.mobileL} {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media ${device.tablet} {
+    h1 {
+      font-size: 70px;
+    }
+
+    p {
+      font-size: 26px;
+    }
+  }
 `;
 
 const StyledHeading = styled(StyledHeader)`
@@ -55,7 +71,6 @@ const MotivationSection = styled.section`
   p {
     color: ${({ theme }) => theme.colors.primaryWhite};
     font-weight: bold;
-    /* font-size: 12px; */
   }
 `;
 const Main: React.FC<MainProps> = ({}) => {
@@ -77,7 +92,8 @@ const Main: React.FC<MainProps> = ({}) => {
             graphs
           </p>
           <p>
-            - Hypercharge your journey from novice to expert with best practices{' '}
+            - Hypercharge your journey from novice to expert with the best
+            practices available
           </p>
         </MotivationSection>
       </StyledSection>

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import FeatureCards from './FeatureCard';
 import cards from '../utils/features';
 import RegisterButton from './ButtonComponent';
+import { device } from '../utils/breakpoints';
 
 interface FeaturesProps {}
 
@@ -43,6 +44,10 @@ const StyledInvitation = styled.h3`
   margin: auto;
   margin-top: 0.6rem;
   margin-bottom: 1rem;
+
+  @media ${device.tablet} {
+    font-size: 28px;
+  }
 `;
 
 const Features: React.FC<FeaturesProps> = ({}) => {

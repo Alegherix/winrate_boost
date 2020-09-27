@@ -59,7 +59,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
       <ImageContainer />
       <HeroContainer>
         <HeroHeading>
-          A free winrate boosting tool for you to start <span>winning</span>
+          Professional level <span>Gaming</span> tools for everyone
         </HeroHeading>
         <HeroDescription>
           Start beating your opponents consistently
@@ -74,3 +74,7 @@ const Hero: React.FC<HeroProps> = ({}) => {
 };
 
 export default Hero;
+
+// A free winrate boosting tool for you to start <span>winning</span>
+// Gaming skills at pro level made available for everyone
+// Gaming skills taken to the next <span>level</span>

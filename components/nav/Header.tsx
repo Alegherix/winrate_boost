@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import styled from 'styled-components';
 import { device } from '../../utils/breakpoints';
 import Burger from './Burger';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const Nav = styled.nav`
   position: sticky;
@@ -15,6 +16,11 @@ const Nav = styled.nav`
     font-size: 16px;
     font-weight: bold;
     font-family: ${({ theme }) => theme.fonts.spartan};
+
+    a {
+      text-decoration: none;
+      color: ${({ theme }) => theme.colors.primaryWhite};
+    }
   }
 
   @media ${device.tablet} {
@@ -36,10 +42,10 @@ const FixedWrapper = styled.div`
     scrolled ? theme.colors.primaryDark : 'rgba(0,0,0,0)'};
 `;
 
-const RegisterNavbar = () => {
+const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
-  // Funktion för att ändra opacity under navigation
+  // Changes opacity when scrolling
   function handleOpacity() {
     const position = document.querySelector('nav').offsetTop;
 
@@ -55,7 +61,10 @@ const RegisterNavbar = () => {
   }
 
   useEffect(() => {
+    // Listens to scroll
     window.addEventListener('scroll', handleOpacity);
+
+    // Removes event Listener when component is dismounted
     return () => window.removeEventListener('scroll', handleOpacity);
   }),
     [scrolled];
@@ -63,7 +72,11 @@ const RegisterNavbar = () => {
   return (
     <Nav scrolled={scrolled}>
       <FixedWrapper scrolled={scrolled}>
-        <div className={'logo'}>WBooster</div>
+        <div className={'logo'}>
+          <Link href="/">
+            <a>WBoost</a>
+          </Link>
+        </div>
         <Burger />
       </FixedWrapper>
     </Nav>
@@ -71,4 +84,4 @@ const RegisterNavbar = () => {
 };
 /* - {String(scrolled)} */
 
-export default RegisterNavbar;
+export default Header;

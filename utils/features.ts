@@ -7,7 +7,8 @@ interface Card {
 const cards: Card[] = [
   {
     heading: 'Aim Guides',
-    text: 'Learn what to focus on and take your aim to the next level',
+    text:
+      'Learn what to focus on, how to train it and take your aim to the next level',
     path: 'images/sniper.jpg',
   },
   {
@@ -24,7 +25,7 @@ const cards: Card[] = [
   {
     heading: 'Score Keeper',
     text:
-      'Keep a track of your score to know wheter or not you actually are improving',
+      'Keep a track of your score to know wheter or not you are actually improving',
     path: '/images/weapon-on-log.jpg',
   },
 ];

@@ -1,6 +1,5 @@
-1) Fyll Flex container i Main så den expanderar ut fullt.
-2) Gör övergången till None opacity med en transition över typ 0.2s
-
+1) Fixa Former i Formik
+2) Fixa Så Wbooster är en Länk till homepagen, 
 
 
 
@@ -12,3 +11,17 @@
 Frågor:
 1) Fråga om Log, samt varför boolean check ballar ur inuti samma statement som de andra. 
 2) Best Practice när det kommer till att sätta heights för en sektion.
+3) Pastea in ger en annan effekt.
+
+
+
+Annat:
+Hitta ett bra namn, Förslag:
+
+
+Game Sense
+Game Boost
+G Sense
+G Boozt
+W Sense
+Win Boost

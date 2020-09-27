@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { device } from '../utils/breakpoints';
 
 interface FeatureCardsProps {
   heading: String;
@@ -12,8 +13,9 @@ const Card = styled.div`
   width: 45%;
   display: flex;
   flex-direction: column;
-  margin: 0.2rem;
+  margin: 0.8rem;
   border-radius: 10px;
+  box-shadow: 2px 2px 7px 4px rgb(40, 40, 40);
 
   img {
     pointer-events: none;
@@ -51,6 +53,31 @@ const Card = styled.div`
   p {
     color: ${({ theme }) => theme.colors.secondaryWhite};
     font-size: 14px;
+  }
+
+  @media ${device.mobileM} {
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+
+  @media ${device.mobileL} {
+    p {
+      font-size: 20px;
+    }
+  }
+
+  @media ${device.tablet} {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 22px;
+    }
   }
 `;
 

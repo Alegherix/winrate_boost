@@ -32,8 +32,6 @@ const NavbarContainer = styled.ul`
 
   @media ${device.tablet} {
     flex-direction: row;
-    /* align-items: center;
-    justify-content: center; */
     background-color: transparent;
     position: relative;
     transform: translateY(0);
@@ -78,7 +76,7 @@ const NavLinks = styled.a`
   }
 `;
 
-const MainNavigation: React.FC<MainNavigationProps> = ({ open }) => {
+const Navigation: React.FC<MainNavigationProps> = ({ open }) => {
   return (
     <NavbarContainer open={open}>
       <NavbarItems>
@@ -108,4 +106,4 @@ const MainNavigation: React.FC<MainNavigationProps> = ({ open }) => {
   );
 };
 
-export default MainNavigation;
+export default Navigation;
