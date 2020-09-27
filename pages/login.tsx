@@ -8,10 +8,12 @@ import ButtonComponent, {
 } from '../components/ButtonComponent';
 import { device } from '../utils/breakpoints';
 import { Color } from '../utils/Constants';
+import Link from 'next/link';
+import LinkButton from '../components/LinkButton';
 
 interface loginProps {}
 
-const Container = styled.section`
+export const Container = styled.section`
   /* height: 90vh; */
   display: flex;
   flex-direction: column;
@@ -56,7 +58,7 @@ const Container = styled.section`
   }
 `;
 
-const Styledform = styled.form`
+export const Styledform = styled.form`
   display: flex;
   flex-direction: column;
   color: white;
@@ -64,7 +66,7 @@ const Styledform = styled.form`
   margin-top: 2rem;
 `;
 
-const StyledInput = styled.input`
+export const StyledInput = styled.input`
   border: none;
   border-bottom: 2px solid white;
   background-color: transparent;
@@ -75,7 +77,7 @@ const StyledInput = styled.input`
   ::placeholder {
     font-family: ${({ theme }) => theme.fonts.spartan};
     color: ${({ theme }) => theme.colors.primaryWhite};
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 800;
   }
 
@@ -99,27 +101,40 @@ const login: React.FC<loginProps> = ({}) => {
             email: '',
             password: '',
           }}
-          onSubmit={(email, password) => {
-            console.log(email);
+          onSubmit={(values, actions) => {
+            console.log(values);
+            actions.resetForm();
           }}
         >
-          <Styledform>
-            <label htmlFor="email"></label>
-            <StyledInput id="email" name="email" placeholder="Email" />
+          {(props) => (
+            <Styledform onSubmit={props.handleSubmit}>
+              <StyledInput
+                type="text"
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                name="email"
+                value={props.values.email}
+                placeholder="Email"
+              />
 
-            <label htmlFor="password"></label>
-            <StyledInput
-              type="password"
-              id="password"
-              name="password"
-              placeholder="Password"
-            />
-            <StyledRegisterButton type="submit">Sign in</StyledRegisterButton>
-          </Styledform>
+              <StyledInput
+                type="password"
+                onChange={props.handleChange}
+                onBlur={props.handleBlur}
+                name="password"
+                value={props.values.password}
+                placeholder="Password"
+              />
+              <StyledRegisterButton type="submit">Sign in</StyledRegisterButton>
+            </Styledform>
+          )}
         </Formik>
 
         <div className="separator" />
-        <ButtonComponent text="Create new account" color={Color.Black} />
+        <Link href="/register" passHref>
+          <LinkButton text="Create new account" color={Color.lightDark} />
+        </Link>
+
         <p>Forgot your password?</p>
       </Container>
     </>

@@ -63,6 +63,7 @@ const theme = {
 
     primaryDark: '#222222',
     secondaryDark: '#2D2D2D',
+    lightDark: '#444',
   },
 
   fonts: {

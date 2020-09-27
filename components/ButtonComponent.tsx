@@ -9,9 +9,10 @@ interface RegisterButtonProps {
 }
 
 export const StyledRegisterButton = styled.button`
+  font-family: ${({ theme }) => theme.fonts.spartan};
   background: ${({ theme }) => theme.colors.primaryBlue};
   color: ${({ theme }) => theme.colors.primaryWhite};
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   border-radius: 10px;
   font-weight: bold;
