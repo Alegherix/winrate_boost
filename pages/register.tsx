@@ -16,7 +16,7 @@ const StyledLink = styled.a`
   font-family: ${({ theme }) => theme.fonts.spartan};
   font-size: 16px;
   margin-top: 2rem;
-  font-weight: 800;
+  /* font-weight: 800; */
 `;
 
 const register: React.FC<registerProps> = ({}) => {

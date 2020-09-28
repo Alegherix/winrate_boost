@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Img from '../assets/soldier.jpg';
 import { device } from '../utils/breakpoints';
 import { StyledHeader } from './HeroHeading';
+import RegisterButton from '../components/ButtonComponent';
 
 interface MainProps {}
 
@@ -97,6 +98,7 @@ const Main: React.FC<MainProps> = ({}) => {
           </p>
         </MotivationSection>
       </StyledSection>
+      <RegisterButton text="Sign up for free now" />
     </>
   );
 };

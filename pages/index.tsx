@@ -16,8 +16,8 @@ export default function Home() {
         <Header />
         <Hero />
       </Navigation>
-      <Main />
       <Features />
+      <Main />
     </Layout>
   );
 }

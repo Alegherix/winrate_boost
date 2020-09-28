@@ -11,7 +11,7 @@ interface FeaturesProps {}
 const StyledSection = styled.section`
   display: flex;
   flex-direction: column;
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-bottom: 1rem;
   padding: 0 1rem;
 
@@ -72,7 +72,6 @@ const Features: React.FC<FeaturesProps> = ({}) => {
           })}
         </Cardholder>
         <StyledInvitation>And so much more...</StyledInvitation>
-        <RegisterButton text="Sign up for free now" />
       </StyledSection>
     </>
   );
