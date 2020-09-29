@@ -8,6 +8,8 @@ import Footer from '../components/Footer';
 
 const Navigation = styled.nav`
   height: 100vh;
+  /* max-width: 1100px; */
+  /* margin: auto; */
 `;
 
 export default function Home() {

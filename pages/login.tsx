@@ -77,8 +77,15 @@ export const StyledInput = styled.input`
   ::placeholder {
     font-family: ${({ theme }) => theme.fonts.spartan};
     color: ${({ theme }) => theme.colors.primaryWhite};
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 800;
+  }
+
+  /* Used for styling autofill */
+  &:-webkit-autofill {
+    -webkit-box-shadow: ${({ theme }) =>
+      `0 0 0px 1000px ${theme.colors.primaryDark} inset`};
+    -webkit-text-fill-color: ${({ theme }) => theme.colors.primaryWhite};
   }
 
   :focus {

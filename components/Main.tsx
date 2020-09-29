@@ -63,15 +63,23 @@ const StyledHeading = styled(StyledHeader)`
 `;
 
 const MotivationSection = styled.section`
-  flex: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  min-height: 50vh;
+  margin-top: 1rem;
+  text-align: center;
+  span {
+    color: ${({ theme }) => theme.colors.primaryWhite};
+    font-family: ${({ theme }) => theme.fonts.spartan};
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
 
   p {
-    color: ${({ theme }) => theme.colors.primaryWhite};
-    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 1.8rem;
+    text-align: start;
+    color: ${({ theme }) => theme.colors.secondaryWhite};
   }
 `;
 
@@ -82,19 +90,23 @@ const Main: React.FC<MainProps> = ({}) => {
         <StyledHeading>
           Unlock your <span>potential</span>
         </StyledHeading>
-        <p>
-          No more wasting time! Discover the most efficent ways to rapidly
-          increase your performance, become a winner today!
-        </p>
+
         <MotivationSection>
-          <p>- Learn the secrets of what the pro’s are doing</p>
+          <span>Learn from the pro's</span>
           <p>
-            - Watch your progress advance in realtime with personalized data
-            graphs
+            Learn the secrets of what the pro’s are doing, and start
+            implementing it in your own playstyle
           </p>
+          <span>Visualize Progress</span>
           <p>
-            - Hypercharge your journey from novice to expert with the best
-            practices available
+            Log your journey and watch your progress advance in realtime with
+            personalized data graphs
+          </p>
+          <span>Take it to the next level</span>
+          <p>
+            Hypercharge your journey from novice to expert with the best
+            practices available. Get you to where you wanna go as fast as
+            possible
           </p>
         </MotivationSection>
         <RegisterButton text="Sign up for free now" />
@@ -104,3 +116,10 @@ const Main: React.FC<MainProps> = ({}) => {
 };
 
 export default Main;
+
+{
+  /* <p>
+No more wasting time! Discover the most efficent ways to rapidly
+increase your performance, become a winner today!
+</p> */
+}

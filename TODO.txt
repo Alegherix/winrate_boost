@@ -12,7 +12,7 @@ Frågor:
 1) Fråga om Log, samt varför boolean check ballar ur inuti samma statement som de andra. 
 2) Best Practice när det kommer till att sätta heights för en sektion.
 3) Pastea in ger en annan effekt.
-
+4) Layout med max-width ???? 
 
 
 Annat:

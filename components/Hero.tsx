@@ -23,6 +23,7 @@ const ImageContainer = styled.header`
 
 export const HeroContainer = styled.section`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 75vh;
 

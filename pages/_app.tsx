@@ -1,6 +1,7 @@
 import type { AppProps /*, AppContext */ } from 'next/app';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import { device } from '../utils/breakpoints';
+import Layout from '../utils/layout';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -12,6 +13,7 @@ const GlobalStyle = createGlobalStyle`
   body{
     background-color: #222;
     /* background: url("../assets/hero.jpg") no-repeat center center/cover; */
+  
 
     p{
       color: #A6A6A6;
@@ -75,6 +77,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <GlobalStyle />
+
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />
       </ThemeProvider>

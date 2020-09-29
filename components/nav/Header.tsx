@@ -42,6 +42,11 @@ const FixedWrapper = styled.div`
     scrolled ? theme.colors.primaryDark : 'rgba(0,0,0,0)'};
 `;
 
+const Logo = styled.img`
+  height: 32px;
+  width: 32px;
+`;
+
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -51,12 +56,10 @@ const Header = () => {
 
     if (window.pageYOffset > position) {
       if (!scrolled) {
-        setScrolled(() => true);
-        console.log('At Below top, so opacity should be true??: ', scrolled);
+        setScrolled(true);
       }
     } else {
-      setScrolled(() => false);
-      console.log('At top, so opacity should be false:', scrolled);
+      setScrolled(false);
     }
   }
 
@@ -69,11 +72,13 @@ const Header = () => {
   }),
     [scrolled];
 
+  console.log('At Below top, so opacity should be true??: ', scrolled);
   return (
     <Nav scrolled={scrolled}>
       <FixedWrapper scrolled={scrolled}>
         <div className={'logo'}>
           <Link href="/">
+            {/* <Logo src="/icons/logo.svg" /> */}
             <a>WBoost</a>
           </Link>
         </div>

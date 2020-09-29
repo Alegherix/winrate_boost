@@ -1,18 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
-// import FacebookIcon from './IconComponent';
 
 interface FooterProps {}
 
 const StyledContainer = styled.footer`
-  /* height: 80px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 0.4rem;
 
-  /* background-color: ${({ theme }) => theme.colors.tertiaryWhite}; */
+  p {
+    font-size: 13px;
+  }
 `;
 
 const LogoContainer = styled.div`
@@ -23,8 +23,6 @@ const ImageContainer = styled.img`
   height: 30px;
   width: 30px;
   margin: 1.2rem 1rem;
-
-  /* fill: green; */
 `;
 
 const Footer: React.FC<FooterProps> = ({}) => {

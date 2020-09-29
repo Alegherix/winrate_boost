@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="50" cy="50" r="50" fill="#0498D8"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M50 75C63.8071 75 75 63.8071 75 50C75 36.1929 63.8071 25 50 25C36.1929 25 25 36.1929 25 50C25 63.8071 36.1929 75 50 75ZM50 70C61.0457 70 70 61.0457 70 50C70 38.9543 61.0457 30 50 30C38.9543 30 30 38.9543 30 50C30 61.0457 38.9543 70 50 70Z" fill="white"/>
+<rect x="47" y="58" width="6" height="38" rx="3" fill="white"/>
+<rect x="4" y="53" width="6" height="38" rx="3" transform="rotate(-90 4 53)" fill="white"/>
+<path d="M61 53C59.3431 53 58 51.6569 58 50V50C58 48.3431 59.3431 47 61 47H93C94.6569 47 96 48.3431 96 50V50C96 51.6569 94.6569 53 93 53H61Z" fill="white"/>
+<rect x="47" y="4" width="6" height="38" rx="3" fill="white"/>
+<circle cx="50" cy="50" r="3" fill="white"/>
+</svg>
