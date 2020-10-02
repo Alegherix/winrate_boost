@@ -2,15 +2,8 @@ import React from 'react';
 import { Activated } from '../../utils/Constants';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { Assignment } from '../svg_components';
+import { AuthNavigationComponentProps } from "../../utils/navigation"
 
-interface AuthNavigationComponentProps {
-  text: String;
-  path: string;
-  imagePath: string;
-  altText: string;
-  activated: Activated;
-}
 
 const StyledLinks = styled(Link)`
   a {
@@ -18,18 +11,25 @@ const StyledLinks = styled(Link)`
   }
 `;
 
+const StyledSvg = styled.section`
+svg{
+  fill: ${({ activated, theme }) => activated == Activated.ON? theme.colors.primaryBlue : theme.colors.primaryWhite};
+}
+`;
+
 const AuthNavigationComponent: React.FC<AuthNavigationComponentProps> = ({
   text,
   path,
-  imagePath,
-  altText,
-  activated = Activated.ON,
+  activated = Activated.OFF,
+  svgComponent
 }) => {
   return (
     <>
-      <StyledLinks href={path} activated={activated}>
+      <StyledLinks href={path}>
         <a>
-          <Assignment />
+          <StyledSvg activated={activated}>
+          {svgComponent}
+          </StyledSvg>
           {text}
         </a>
       </StyledLinks>

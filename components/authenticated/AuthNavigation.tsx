@@ -1,7 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
 import AuthNavigationComponent from './AuthNavigationComponent';
+import { Assignment } from '../svg_components';
 import { Activated } from '../../utils/Constants';
+import AuthNavItems from "../../utils/navigation"
+
 
 interface NavigationProps {}
 
@@ -11,15 +13,13 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
       <div>
         <nav>
           <ul>
-            <li>
-              <AuthNavigationComponent
-                text="Dashboard"
-                path="/dashboard"
-                imagePath="/icons/facebook.svg"
-                altText="Image of Dashboard Icon"
-                activated={Activated.ON}
-              />
-            </li>
+            {AuthNavItems.map( ({text, path, svgComponent, activated}) => {
+              return(
+                <li key={path}>
+                  <AuthNavigationComponent text={text} path={path} svgComponent={svgComponent} activated={activated}/>
+                </li>
+              );
+            })}
           </ul>
         </nav>
       </div>
@@ -28,3 +28,12 @@ const Navigation: React.FC<NavigationProps> = ({}) => {
 };
 
 export default Navigation;
+
+<li>
+<AuthNavigationComponent
+  text="Dashboard"
+  path="/dashboard"
+  activated={Activated.OFF}
+  svgComponent ={<Assignment />}
+/>
+</li>
