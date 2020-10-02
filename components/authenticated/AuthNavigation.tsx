@@ -3,9 +3,12 @@ import AuthNavigationComponent from './AuthNavigationComponent';
 import { Assignment } from '../svg_components';
 import { Activated } from '../../utils/Constants';
 import AuthNavItems from "../../utils/navigation"
+import styled  from "styled-components";
 
 
 interface NavigationProps {}
+
+
 
 const Navigation: React.FC<NavigationProps> = ({}) => {
   return (

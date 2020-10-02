@@ -22,7 +22,7 @@ const AuthNavItems: AuthNavigationComponentProps[] = [
     {
         text: "Guides",
         path: "/guides",
-        svgComponent: <SvgDashboard />,
+        svgComponent: <SvgAssignment />,
     },
     {
         text: "Checklist",

@@ -14,7 +14,17 @@ const StyledLinks = styled(Link)`
 const StyledSvg = styled.section`
 svg{
   fill: ${({ activated, theme }) => activated == Activated.ON? theme.colors.primaryBlue : theme.colors.primaryWhite};
+  margin-right: 0.7rem;
 }
+`;
+
+const StyledAnchor = styled.a`
+text-decoration: none;
+color: ${({theme}) => theme.colors.primaryWhite};
+display: flex;
+align-items: center;
+margin-bottom: 0.7rem;
+
 `;
 
 const AuthNavigationComponent: React.FC<AuthNavigationComponentProps> = ({
@@ -26,12 +36,12 @@ const AuthNavigationComponent: React.FC<AuthNavigationComponentProps> = ({
   return (
     <>
       <StyledLinks href={path}>
-        <a>
+        <StyledAnchor>
           <StyledSvg activated={activated}>
           {svgComponent}
           </StyledSvg>
           {text}
-        </a>
+        </StyledAnchor>
       </StyledLinks>
     </>
   );
