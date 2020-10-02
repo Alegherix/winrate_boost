@@ -4,3 +4,8 @@ export enum Color {
   Black,
   lightDark,
 }
+
+export enum Activated {
+  ON,
+  OFF,
+}
