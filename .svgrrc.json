@@ -2,9 +2,9 @@
   "icon": true,
   "typescript": true,
   "svgProps": {
-    "height": "{props.height !== null ? props.height : '32px'}",
-    "width": "{props.width !== null ? props.width : '32px'}",
+    "height": "{props.height !== undefined ? props.height : '32px'}",
+    "width": "{props.width !== undefined ? props.width : '32px'}",
     "viewBox": "0 0 24 24",
-    "fill": "{props.fill !== null ? props.fill : 'white'}"
+    "fill": "{props.fill !== undefined ? props.fill : 'white'}"
   }
 }

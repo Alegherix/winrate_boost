@@ -1,8 +1,8 @@
 import React from 'react';
 import { Activated } from '../../utils/Constants';
 import Link from 'next/link';
-import { Url } from 'url';
 import styled from 'styled-components';
+import { Assignment } from '../svg_components';
 
 interface AuthNavigationComponentProps {
   text: String;
@@ -13,22 +13,8 @@ interface AuthNavigationComponentProps {
 }
 
 const StyledLinks = styled(Link)`
-  display: flex;
-
   a {
     font-size: 20px;
-  }
-`;
-
-const StyledImage = styled.img`
-  margin-right: 1rem;
-  fill: ${({ theme, activated }) =>
-    activated == Activated.ON
-      ? theme.colors.primaryWhite
-      : theme.colors.primaryBlue};
-
-  svg {
-    fill: red;
   }
 `;
 
@@ -37,13 +23,13 @@ const AuthNavigationComponent: React.FC<AuthNavigationComponentProps> = ({
   path,
   imagePath,
   altText,
-  activated = Activated.OFF,
+  activated = Activated.ON,
 }) => {
   return (
     <>
       <StyledLinks href={path} activated={activated}>
         <a>
-          <StyledImage src={imagePath} alt={altText} />
+          <Assignment />
           {text}
         </a>
       </StyledLinks>
