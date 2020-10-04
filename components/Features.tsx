@@ -3,7 +3,6 @@ import { StyledHeader } from './HeroHeading';
 import styled from 'styled-components';
 import FeatureCards from './FeatureCard';
 import cards from '../utils/features';
-import RegisterButton from './ButtonComponent';
 import { device } from '../utils/breakpoints';
 
 interface FeaturesProps {}
@@ -60,13 +59,13 @@ const Features: React.FC<FeaturesProps> = ({}) => {
           you!
         </p>
         <Cardholder>
-          {cards.map(({ heading, text, path }) => {
+          {cards.map(({ heading, text, svgComponent }) => {
             return (
               <FeatureCards
                 key={String(text)}
                 heading={heading}
                 text={text}
-                img={path}
+                svgComponent={svgComponent}
               />
             );
           })}

@@ -1,12 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { device } from '../utils/breakpoints';
+import { Card as CardProp } from '../utils/features';
 
-interface FeatureCardsProps {
-  heading: String;
-  text: String;
-  img: string;
-}
+// interface FeatureCardsProps {
+//   heading: String;
+//   text: String;
+//   svgComponent: React.SVGProps<SVGSVGElement>;
+// }
 
 const Card = styled.div`
   display: flex;
@@ -16,13 +17,13 @@ const Card = styled.div`
   min-width: 300px;
   width: 45%;
   margin: 0.8rem;
-
-  img {
+  border-radius: 10px;
+  box-shadow: -4px -4px 12px rgba(53, 53, 53, 0.25);
+  padding: 1rem;
+  svg {
     height: 60px;
     width: 60px;
     margin: auto;
-    /* fill: red; */
-    /* background: white; */
   }
 
   .imageContainer {
@@ -86,14 +87,12 @@ const Card = styled.div`
   }
 `;
 
-const FeatureCards: React.FC<FeatureCardsProps> = ({ heading, text, img }) => {
+const FeatureCards: React.FC<CardProp> = ({ heading, text, svgComponent }) => {
   return (
     <>
-      <Card img={img}>
+      <Card>
         <div className="container">
-          <div className="imageContainer">
-            <img src={img} />
-          </div>
+          <div className="imageContainer">{svgComponent}</div>
           <div className="contentContainer">
             <h2>{heading}</h2>
             <p>{text}</p>
