@@ -2,8 +2,7 @@ import React from 'react';
 import { Activated } from '../../utils/Constants';
 import Link from 'next/link';
 import styled from 'styled-components';
-import { AuthNavigationComponentProps } from "../../utils/navigation"
-
+import { AuthNavigationComponentProps } from '../../utils/navigation';
 
 const StyledLinks = styled(Link)`
   a {
@@ -11,37 +10,39 @@ const StyledLinks = styled(Link)`
   }
 `;
 
-const StyledSvg = styled.section`
-svg{
-  fill: ${({ activated, theme }) => activated == Activated.ON? theme.colors.primaryBlue : theme.colors.primaryWhite};
-  margin-right: 0.7rem;
-}
-`;
+const A = styled.a`
+  cursor: pointer;
+  color: ${({ theme }) => theme.colors.primaryWhite};
+  display: flex;
+  align-items: center;
+  font-family: ${({ theme }) => theme.fonts.spartan};
+  font-size: 20px;
+  font-weight: 800;
+  padding: 1rem;
 
-const StyledAnchor = styled.a`
-text-decoration: none;
-color: ${({theme}) => theme.colors.primaryWhite};
-display: flex;
-align-items: center;
-margin-bottom: 0.7rem;
+  svg {
+    fill: ${({ activated, theme }) =>
+      activated == Activated.ON
+        ? theme.colors.primaryBlue
+        : theme.colors.primaryWhite};
 
+    margin-right: 0.7rem;
+  }
 `;
 
 const AuthNavigationComponent: React.FC<AuthNavigationComponentProps> = ({
   text,
   path,
+  svgComponent,
   activated = Activated.OFF,
-  svgComponent
 }) => {
   return (
     <>
-      <StyledLinks href={path}>
-        <StyledAnchor>
-          <StyledSvg activated={activated}>
+      <StyledLinks href={path} activated={activated}>
+        <A activated={activated}>
           {svgComponent}
-          </StyledSvg>
           {text}
-        </StyledAnchor>
+        </A>
       </StyledLinks>
     </>
   );

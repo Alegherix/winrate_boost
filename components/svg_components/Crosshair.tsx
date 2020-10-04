@@ -1,12 +1,12 @@
-import * as React from "react";
+import * as React from 'react';
 
 function SvgCrosshair(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      width={props.width !== undefined ? props.width : "32px"}
-      height={props.height !== undefined ? props.height : "32px"}
-      viewBox="0 0 24 24"
-      fill={props.fill !== undefined ? props.fill : "white"}
+      width={props.width !== undefined ? props.width : '32px'}
+      height={props.height !== undefined ? props.height : '32px'}
+      viewBox="0 0 100 100"
+      fill={props.fill !== undefined ? props.fill : 'white'}
       {...props}
     >
       <path
